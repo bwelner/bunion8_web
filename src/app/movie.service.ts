@@ -21,9 +21,16 @@ export class MovieService {
   addMovie(movie: Movie){
     console.log(movie);
     let newMovie= {
-      name: movie.title
+      title: movie.title,
+      backdrop_path: movie.backdrop_path,
+      poster_path: movie.poster_path,
+      overview: movie.overview
     };
     return this.http.post("http://localhost:8080/movie", newMovie);
+  }
+
+  getMovies() : Observable<Movie[]> {
+    return this.http.get<Movie[]>("http://localhost:8080/movie");
   }
 
   constructor(private http: HttpClient) { }
