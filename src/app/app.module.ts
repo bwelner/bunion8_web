@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BarRatingModule } from 'ngx-bar-rating';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './movie.service';
@@ -34,6 +35,7 @@ import { MoviesComponent } from './movies/movies.component';
     MatIconModule,
     FormsModule,
     MatSnackBarModule,
+    BarRatingModule,
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
